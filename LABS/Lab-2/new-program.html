@@ -1,0 +1,30 @@
+<!--Author: Shimona Kerua
+Date: 18 March 2026
+Unit: IS312 Webb Application Development -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add New Program</title>
+        <script>
+            function validateForm() {
+                let code = document. forms["programForm"]["programCode"].value;
+                let name = document. forms ["programForm"]["programName"].value;
+                if (code ==="" || name === ""){
+                    alert("All fields must be filled out!");
+                    return false;
+                }
+                return true;
+
+            }
+        </script>
+    </head>
+    <body>
+        <h2> Add New Program</h2>
+        <form name = "programForm" action="add-new-program.php" method="POST" onsubmit="return validateForm()">
+            Program Code: <input type="text" name="programCode"><br><br>
+            Program Name; <input type="text" name="programName"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
